@@ -1,15 +1,4 @@
----
-output:
-  pdf_document: default
-  html_document: default
----
 
-```{r setup, include=FALSE}
-knitr::opts_chunk$set(echo = TRUE)
-```
-
-
-```{r}
 library(utils)
 library(readxl)
 library(car)
@@ -22,9 +11,7 @@ library(ggplot2)
 library(tidyverse)
 library(ggpubr)
 library(rstatix)
-```
 
-```{r}
 # Q1
 
 score<-c(44, 46, 59, 48, 49, 60, 51, 39,
@@ -51,9 +38,7 @@ abline(h = 0, lty = 2)
 qqnorm(type.ANOVA$residuals, 
        main = "Normal Q-Q plot of residuals\n ANOVA on type effects data")
 qqline(type.ANOVA$residuals)
-```
 
-```{r}
 #Q2
 zinc<-c( 6340, 4280, 5170, 2880, 4330, 3050,
           3690, 4750, 5100, 2360, 1990, 2140,
@@ -114,9 +99,7 @@ interaction.plot(x.factor = pH,
                  legend = TRUE, xpd=TRUE,
                  trace.label="plant name")
 
-```
 
-```{r}
 Marks <- c(67, 66, 75, 76, 71, 70, 72,  63, 72, 62, 61, 69, 64, 71, 68, 56,
            69, 57, 55, 63, 65, 55,  59, 47, 49,
            30, 47,  39, 33)
@@ -162,10 +145,6 @@ interaction.plot(x.factor = sex,
                  trace.label="Ethnic group")
 
 
-```
-
-
-```{r}
 ######Q4
 area<-c(516,469.06,462.25,938.6,1357.15,1773.66,1686.01,1786.29,3090.07,3980.12,4424.84,4451.68,4982.89,
         4450.86,5490.74,7476.21,7138.82,9149.94,10133.07,9287.69,13729.13,20300.77,24712.72,27144.03,26117.81)
@@ -225,8 +204,6 @@ ols_plot_cooksd_chart(macro.lm2)
 
 # Obtain 95% confidence intervals for beta_0 and beta_1.
 confint.default(macro.lm2)
-
-```
 
 
 
